@@ -9,6 +9,7 @@ import os
 import re
 import sys
 import time
+import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -35,6 +36,32 @@ WHITE = {
 }
 MAX_RISK = 300
 CST = timezone(timedelta(hours=8))
+
+
+def push(title, body):
+    """Server酱推送到微信（支持 Turbo 与 Server酱³ 两种 SendKey）"""
+    key = (os.environ.get("SERVERCHAN_KEY") or "").strip()
+    if not key:
+        print("（未配置 SERVERCHAN_KEY，跳过推送）")
+        return False
+    urls = []
+    m = re.match(r"sctp(\d+)t", key, re.I)
+    if m:                                   # Server酱³: sctp<uid>t<token>
+        urls.append("https://%s.push.ft07.com/send/%s.send" % (m.group(1), key))
+    urls.append("https://sctapi.ftqq.com/%s.send" % key)   # Turbo
+    for u in urls:
+        try:
+            data = urllib.parse.urlencode({"title": title[:32], "desp": body}).encode()
+            req = urllib.request.Request(u, data=data,
+                                         headers={"User-Agent": "Mozilla/5.0"})
+            raw = urllib.request.urlopen(req, timeout=15).read().decode("utf-8", "ignore")
+            print("推送返回:", raw[:200])
+            if '"code":0' in raw.replace(" ", ""):
+                print("推送成功 ✓")
+                return True
+        except Exception as e:
+            print("推送尝试失败(%s): %s" % (u.split("/")[2], str(e)[:60]))
+    return False
 
 
 def now_cst():
@@ -156,6 +183,12 @@ def refresh_baseline(prices):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
+    # 推送自检：手动运行工作流时把 PUSH_TEST 设为 yes，可立刻验证微信能否收到
+    if (os.environ.get("PUSH_TEST") or "").strip().lower() in ("yes", "1", "true", "y"):
+        ok = push("【测试】云端盯盘已连通", "这是一条测试推送。\n如果你在微信/手机收到这条消息，说明推送链路正常。\n"
+                                          "时间：%s\n（周一开盘后，只有出现信号才会推送）"
+                  % now_cst().strftime("%Y-%m-%d %H:%M:%S"))
+        print("推送自检结果：" + ("成功 ✓" if ok else "失败 ✗（检查 SERVERCHAN_KEY）"))
     main_df = load_csv(MAIN_CSV)
     codes = [str(r["maincode"]).upper() for _, r in main_df.iterrows() if str(r["maincode"])]
     # 主力合约从 data/主力合约.csv 动态解析：换月时只需更新该文件，白名单自动跟随
@@ -225,6 +258,11 @@ def main():
                     "链条 %s %+.2f%% ｜ 区间 %.1f~%.1f ｜ 最近K %s\n"
                     % (stamp.strftime("%Y-%m-%d %H:%M:%S"), kind, name, want, px, stop, tgt,
                        risk, chname, cavg, lo, hi, tbar), encoding="utf-8-sig")
+                push("【短线信号】%s %s" % (name, want),
+                     "品种：%s（%s）\n方向：%s\n入场：%.1f\n止损：%.1f\n目标：%.1f\n"
+                     "风险：%.0f 元\n链条：%s %+.2f%%\n时段：%s\n区间：%.1f ~ %.1f\n\n"
+                     "（打开仓库 out/待答复_最新.txt 复制给助手复核）"
+                     % (name, sym, want, px, stop, tgt, risk, chname, cavg, kind, lo, hi))
             elif allow != want:
                 flag = "  (突破但链条反向 → 放弃)"
             elif risk > MAX_RISK:
