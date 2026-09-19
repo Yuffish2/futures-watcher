@@ -1,15 +1,12 @@
 name: cloud-watcher
-
-  on:
+on:
     schedule:
       # 北京时间 日盘 09:00-15:00 = UTC 01:00-07:00；夜盘 21:00-23:00 = UTC 13:00-15:00
       - cron: "*/15 1-7,13-15 * * 1-5"
     workflow_dispatch:
-
-  permissions:
+permissions:
     contents: write
-
-  jobs:
+jobs:
     watch:
       runs-on: ubuntu-latest
       timeout-minutes: 10
