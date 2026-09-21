@@ -2,7 +2,10 @@ name: cloud-watcher
 
 on:
   schedule:
-    - cron: "*/15 1-7,13-15 * * 1-5"
+    # 北京时间 09:00 / 12:00 / 21:00 各启动一次，每次在时段内自己循环 ~2h50m（GitHub 单次上限 6h）
+    - cron: "0 1 * * 1-5"
+    - cron: "0 4 * * 1-5"
+    - cron: "0 13 * * 1-5"
   workflow_dispatch:
     inputs:
       pushtest:
@@ -16,7 +19,7 @@ permissions:
 jobs:
   watch:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 200
     steps:
       - uses: actions/checkout@v5
 
@@ -31,7 +34,8 @@ jobs:
         env:
           SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}
           PUSH_TEST: ${{ inputs.pushtest }}
-        run: python cloud_watch.py 2>&1 | tee out/last_run.txt
+          MODE: ${{ inputs.mode }}
+        run: python cloud_watch.py session 2>&1 | tee out/last_run.txt
 
       - name: Commit results
         run: |
@@ -39,4 +43,5 @@ jobs:
           git config user.email "cloud-watcher@users.noreply.github.com"
           git add -A
           git diff --cached --quiet || git commit -m "watch: $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git pull --rebase --autostash || true
           git push
