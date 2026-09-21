@@ -93,6 +93,7 @@ def realtime(code):
 
 
 def realtime_batch(codes):
+    """返回 {代码: (最新价, 昨结算价)}。昨结价由交易所行情给出，无需自己维护基准文件。"""
     out = {}
     for i in range(0, len(codes), 30):
         batch = codes[i:i + 30]
@@ -105,7 +106,9 @@ def realtime_batch(codes):
             if m and m.group(2):
                 f = m.group(2).split(",")
                 try:
-                    out[m.group(1).upper()] = float(f[8])
+                    last = float(f[8])
+                    prev = float(f[10]) if len(f) > 10 and f[10] else None
+                    out[m.group(1).upper()] = (last, prev)
                 except Exception:
                     pass
         time.sleep(0.3)
@@ -181,7 +184,8 @@ def refresh_baseline(prices):
     print("基准价已刷新：%d 条 @ %s" % (len(rows), now_cst().strftime("%Y-%m-%d %H:%M")))
 
 
-def main():
+def evaluate():
+    """跑一轮：抓价 → 算链条 → 查白名单 → 有信号就写文件+推送。返回本轮价格表。"""
     OUT.mkdir(parents=True, exist_ok=True)
     # 推送自检：手动运行工作流时把 PUSH_TEST 设为 yes，可立刻验证微信能否收到
     if (os.environ.get("PUSH_TEST") or "").strip().lower() in ("yes", "1", "true", "y"):
@@ -193,29 +197,17 @@ def main():
     codes = [str(r["maincode"]).upper() for _, r in main_df.iterrows() if str(r["maincode"])]
     # 主力合约从 data/主力合约.csv 动态解析：换月时只需更新该文件，白名单自动跟随
     mc_by_name = {str(r["name"]): str(r["maincode"]).upper() for _, r in main_df.iterrows()}
-    prices = realtime_batch(codes)
-    if len(prices) < 20:
-        print("实时行情获取失败（%d 个），退出" % len(prices))
-        return
+    quotes = realtime_batch(codes)
+    if len(quotes) < 20:
+        print("实时行情获取失败（%d 个），退出" % len(quotes))
+        return {}
+    prices = {k: v[0] for k, v in quotes.items()}
     stamp = now_cst()
-    # 收盘后刷新基准
     hm = stamp.strftime("%H:%M")
-    if ("15:02" <= hm <= "15:12") or ("23:02" <= hm <= "23:12"):
-        refresh_baseline(prices)
-    if not BASE_CSV.exists():
-        print("基准文件不存在，先写入")
-        refresh_baseline(prices)
-        return
-    base = {}
     main_of = {str(r["contcode"]).upper(): str(r["maincode"]).upper() for _, r in main_df.iterrows()}
-    for _, r in load_csv(BASE_CSV).iterrows():
-        mc = main_of.get(str(r["代码"]).upper())
-        try:
-            if mc:
-                base[mc] = float(r["昨收价"])
-        except Exception:
-            pass
-    chg = {k: (v / base[k] - 1) * 100 for k, v in prices.items() if k in base and base[k]}
+    # 涨跌 = 最新价 / 昨结算价 − 1（交易所行情自带，无需维护基准文件）
+    chg = {k: (v[0] / v[1] - 1) * 100 for k, v in quotes.items()
+           if v[1] and v[1] > 0}
     chain = {}
     for r in csv.DictReader(io.open(CHAIN_CSV, encoding="utf-8-sig")):
         mc = main_of.get(r["代码"].upper())
@@ -274,6 +266,52 @@ def main():
                    [stamp.strftime("%Y-%m-%d %H:%M:%S"), name, round(px, 1), round(lo, 1),
                     round(hi, 1), state, allow or "-",
                     round(cavg, 2) if cavg is not None else "", round(risk) if risk else ""])
+    return prices
+
+
+def in_session():
+    """当前是否在可交易时段（北京时间）：日盘 08:40-15:05 / 夜盘 20:40-23:05"""
+    d = now_cst()
+    if d.weekday() >= 5:
+        return None
+    hm = d.strftime("%H:%M")
+    if "08:40" <= hm <= "15:05":
+        return ("day", "15:05")
+    if "20:40" <= hm <= "23:05":
+        return ("night", "23:05")
+    return None
+
+
+def main():
+    """mode=session：守住整个时段（自己循环，不依赖 GitHub 每 15 分钟触发）
+       mode=once   ：只跑一轮（默认）"""
+    mode = (sys.argv[1] if len(sys.argv) > 1 else os.environ.get("MODE") or "once").lower()
+    sess = in_session()
+    if mode != "session" or not sess:
+        if mode == "session" and not sess:
+            print("当前不在交易时段（%s），只跑一轮。" % now_cst().strftime("%H:%M"))
+        evaluate()
+        return
+    kind, end_hm = sess
+    MAX_MIN = 170                      # GitHub 单次任务上限 6 小时，这里每轮只守 ~2h50m，由下一个 cron 接力
+    print("===== 守住 %s 时段，最晚到 %s（北京时间），本轮最长 %d 分钟 =====" % (kind, end_hm, MAX_MIN))
+    t0 = time.time()
+    n = 0
+    while True:
+        d = now_cst()
+        hm = d.strftime("%H:%M")
+        if hm > end_hm or (time.time() - t0) / 60 > MAX_MIN:
+            break
+        try:
+            evaluate()
+            n += 1
+        except Exception as e:
+            print("本轮出错（继续）：%s" % str(e)[:120])
+        d = now_cst()
+        if d.strftime("%H:%M") > end_hm or (time.time() - t0) / 60 > MAX_MIN:
+            break
+        time.sleep(300)                # 每 5 分钟一轮
+    print("本轮结束，共跑 %d 轮（下一轮 cron 会接力）" % n)
 
 
 if __name__ == "__main__":
