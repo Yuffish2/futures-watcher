@@ -216,8 +216,11 @@ def evaluate():
     chain_avg = {k: float(np.mean(v)) for k, v in chain.items()}
     # 白名单检查
     kind = "night" if (hm >= "20:55" or hm <= "03:00") else "day"
-    print("云端盯盘 %s ｜ 时段 %s ｜ 链条前4：%s" % (
+    sess_now = in_session()
+    live = sess_now is not None            # ⚠️ 只有真正在交易时段内才允许产生信号
+    print("云端盯盘 %s ｜ 时段 %s ｜ %s ｜ 链条前4：%s" % (
         stamp.strftime("%Y-%m-%d %H:%M"), kind,
+        "✅ 盘中（可出信号）" if live else "⛔ 非交易时段（只记录，不出信号）",
         " ".join("%s%+.2f%%" % (k, v) for k, v in sorted(chain_avg.items(), key=lambda x: -x[1])[:4])))
     for name, (chname, sym_default, mult, tick, fee) in WHITE.items():
         sym = mc_by_name.get(name, sym_default)
@@ -237,11 +240,13 @@ def evaluate():
         flag = ""
         if state != "区间内" and a and risk and allow:
             want = "多" if state == "上破" else "空"
-            if allow == want and risk <= MAX_RISK:
+            if allow == want and risk <= MAX_RISK and live:
                 stop = px - a if want == "多" else px + a
                 tgt = px + 1.5 * a if want == "多" else px - 1.5 * a
                 flag = "  >>> 信号 %s %s 入场 %.1f 止损 %.1f 目标 %.1f 风险 %.0f元" % (
                     name, want, px, stop, tgt, risk)
+            elif allow == want and risk <= MAX_RISK and not live:
+                flag = "  （盘中会出信号，但当前非交易时段 → 只记录不推送）"
                 append_csv(SIG_CSV, ["时间", "品种", "方向", "入场", "止损", "目标", "风险元", "链均", "时段"],
                            [stamp.strftime("%Y-%m-%d %H:%M:%S"), name, want, round(px, 1),
                             round(stop, 1), round(tgt, 1), round(risk), round(cavg, 2), kind])
