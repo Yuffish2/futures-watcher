@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-05 21:00:42",
+  "time": "2026-10-05 21:30:31",
   "session": "night",
   "live": true,
   "chains": {
@@ -43,7 +43,7 @@
       "atr60": 73.42857142857143,
       "risk": 734,
       "allow": "多",
-      "barAgeMin": 8520.8,
+      "barAgeMin": 8550.6,
       "fresh": false,
       "note": "风险 734 元 >300 → 放弃"
     },
@@ -62,7 +62,7 @@
       "atr60": 17.285714285714285,
       "risk": 173,
       "allow": "多",
-      "barAgeMin": 8520.9,
+      "barAgeMin": 8550.6,
       "fresh": false
     },
     {
@@ -80,7 +80,7 @@
       "atr60": 10.785714285714286,
       "risk": 108,
       "allow": "空",
-      "barAgeMin": 8520.9,
+      "barAgeMin": 8550.6,
       "fresh": false
     },
     {
@@ -98,7 +98,7 @@
       "atr60": 8.571428571428571,
       "risk": 86,
       "allow": "空",
-      "barAgeMin": 8520.9,
+      "barAgeMin": 8550.6,
       "fresh": false
     },
     {
@@ -116,10 +116,15 @@
       "atr60": 9.357142857142858,
       "risk": 94,
       "allow": "多",
-      "barAgeMin": 8520.9,
+      "barAgeMin": 8550.7,
       "fresh": false
     }
   ],
   "signals": [],
-  "pushes": []
+  "pushes": [
+    {
+      "name": "prearm",
+      "result": "ok"
+    }
+  ]
 }
