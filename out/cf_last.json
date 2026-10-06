@@ -1,7 +1,7 @@
 {
-  "time": "2026-10-06 15:30:34",
-  "session": "day",
-  "live": false,
+  "time": "2026-10-06 21:00:32",
+  "session": "night",
+  "live": true,
   "chains": {
     "合成橡胶": 5.134910136009189,
     "煤化工-氯碱": 1.9170678072801017,
@@ -33,35 +33,91 @@
       "sym": "MA2610",
       "chain": "煤化工-氯碱",
       "chainAvg": 1.9170678072801017,
-      "bars": 0
+      "bars": 8,
+      "range": [
+        3631,
+        3723
+      ],
+      "price": 3742,
+      "state": "上破",
+      "atr60": 73.42857142857143,
+      "risk": 734,
+      "allow": "多",
+      "barAgeMin": 9960.6,
+      "fresh": false,
+      "note": "风险 734 元 >300 → 放弃"
     },
     {
       "name": "豆粕",
       "sym": "M2701",
       "chain": "油脂油料",
       "chainAvg": 1.1916885792860454,
-      "bars": 0
+      "bars": 8,
+      "range": [
+        3350,
+        3371
+      ],
+      "price": 3366,
+      "state": "区间内",
+      "atr60": 17.285714285714285,
+      "risk": 173,
+      "allow": "多",
+      "barAgeMin": 9960.7,
+      "fresh": false
     },
     {
       "name": "螺纹",
       "sym": "RB2701",
       "chain": "黑色-成材",
       "chainAvg": -0.02799573217128759,
-      "bars": 0
+      "bars": 8,
+      "range": [
+        3113,
+        3128
+      ],
+      "price": 3119,
+      "state": "区间内",
+      "atr60": 10.785714285714286,
+      "risk": 108,
+      "allow": "空",
+      "barAgeMin": 9960.7,
+      "fresh": false
     },
     {
       "name": "热卷",
       "sym": "HC2701",
       "chain": "黑色-成材",
       "chainAvg": -0.02799573217128759,
-      "bars": 0
+      "bars": 8,
+      "range": [
+        3275,
+        3294
+      ],
+      "price": 3282,
+      "state": "区间内",
+      "atr60": 8.571428571428571,
+      "risk": 86,
+      "allow": "空",
+      "barAgeMin": 9960.7,
+      "fresh": false
     },
     {
       "name": "淀粉",
       "sym": "CS2611",
       "chain": "玉米-淀粉-养殖",
       "chainAvg": 0.04576659038901809,
-      "bars": 0
+      "bars": 8,
+      "range": [
+        2427,
+        2437
+      ],
+      "price": 2437,
+      "state": "区间内",
+      "atr60": 9.357142857142858,
+      "risk": 94,
+      "allow": "多",
+      "barAgeMin": 9960.7,
+      "fresh": false
     }
   ],
   "signals": [],
