@@ -1,7 +1,7 @@
 {
-  "time": "2026-10-06 23:00:41",
+  "time": "2026-10-06 23:30:37",
   "session": "night",
-  "live": true,
+  "live": false,
   "chains": {
     "合成橡胶": 5.134910136009189,
     "煤化工-氯碱": 1.9170678072801017,
@@ -43,7 +43,7 @@
       "atr60": 73.42857142857143,
       "risk": 734,
       "allow": "多",
-      "barAgeMin": 10080.8,
+      "barAgeMin": 10110.7,
       "fresh": false,
       "note": "风险 734 元 >300 → 放弃"
     },
@@ -62,7 +62,7 @@
       "atr60": 17.285714285714285,
       "risk": 173,
       "allow": "多",
-      "barAgeMin": 10080.8,
+      "barAgeMin": 10110.7,
       "fresh": false
     },
     {
@@ -80,7 +80,7 @@
       "atr60": 10.785714285714286,
       "risk": 108,
       "allow": "空",
-      "barAgeMin": 10080.8,
+      "barAgeMin": 10110.8,
       "fresh": false
     },
     {
@@ -98,7 +98,7 @@
       "atr60": 8.571428571428571,
       "risk": 86,
       "allow": "空",
-      "barAgeMin": 10080.8,
+      "barAgeMin": 10110.8,
       "fresh": false
     },
     {
@@ -116,15 +116,10 @@
       "atr60": 9.357142857142858,
       "risk": 94,
       "allow": "多",
-      "barAgeMin": 10080.8,
+      "barAgeMin": 10110.8,
       "fresh": false
     }
   ],
   "signals": [],
-  "pushes": [
-    {
-      "name": "daily",
-      "result": "ok"
-    }
-  ]
+  "pushes": []
 }
