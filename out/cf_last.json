@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-07 09:30:37",
+  "time": "2026-10-07 10:00:41",
   "session": "day",
   "live": true,
   "chains": {
@@ -65,10 +65,5 @@
     }
   ],
   "signals": [],
-  "pushes": [
-    {
-      "name": "prearm",
-      "result": "ok"
-    }
-  ]
+  "pushes": []
 }
