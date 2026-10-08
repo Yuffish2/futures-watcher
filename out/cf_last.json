@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-08 11:30:30",
+  "time": "2026-10-08 12:00:31",
   "session": "day",
   "live": true,
   "chains": {
@@ -43,7 +43,7 @@
       "atr60": 83.78571428571429,
       "risk": 838,
       "allow": "多",
-      "barAgeMin": 30.6,
+      "barAgeMin": 60.6,
       "fresh": false
     },
     {
@@ -61,9 +61,9 @@
       "atr60": 16.642857142857142,
       "risk": 166,
       "allow": "多",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.6,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 0.6 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 30.6 分钟前）→ 不重复推送"
     },
     {
       "name": "螺纹",
@@ -80,8 +80,9 @@
       "atr60": 11.714285714285714,
       "risk": 117,
       "allow": "空",
-      "barAgeMin": 0.6,
-      "fresh": true
+      "barAgeMin": 30.6,
+      "fresh": false,
+      "note": "突破已非新发生（bar 收盘 30.6 分钟前）→ 不重复推送"
     },
     {
       "name": "热卷",
@@ -98,7 +99,7 @@
       "atr60": 9.357142857142858,
       "risk": 94,
       "allow": "空",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.6,
       "fresh": false
     },
     {
@@ -116,27 +117,10 @@
       "atr60": 10.857142857142858,
       "risk": 109,
       "allow": "空",
-      "barAgeMin": 0.7,
+      "barAgeMin": 30.6,
       "fresh": false
     }
   ],
-  "signals": [
-    {
-      "name": "螺纹",
-      "sym": "RB2701",
-      "want": "空",
-      "px": 3077,
-      "stop": 3088.714285714286,
-      "tgt": 3059.4285714285716,
-      "risk": 117,
-      "chain": "黑色-成材",
-      "chainAvg": -1.0820291018266703
-    }
-  ],
-  "pushes": [
-    {
-      "name": "螺纹",
-      "result": "ok"
-    }
-  ]
+  "signals": [],
+  "pushes": []
 }
