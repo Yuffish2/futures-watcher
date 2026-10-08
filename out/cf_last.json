@@ -1,7 +1,7 @@
 {
-  "time": "2026-10-08 15:00:39",
+  "time": "2026-10-08 15:30:28",
   "session": "day",
-  "live": true,
+  "live": false,
   "chains": {
     "原油-油品": 10.144597676238075,
     "芳烃-聚酯": 7.902274308960415,
@@ -43,7 +43,7 @@
       "atr60": 81.07142857142857,
       "risk": 811,
       "allow": "多",
-      "barAgeMin": 75.7,
+      "barAgeMin": 105.5,
       "fresh": false
     },
     {
@@ -56,14 +56,14 @@
         3367,
         3396
       ],
-      "price": 3362,
+      "price": 3366,
       "state": "下破",
       "atr60": 19.714285714285715,
       "risk": 197,
       "allow": "空",
-      "barAgeMin": 0.7,
+      "barAgeMin": 30.6,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 0.7 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 30.6 分钟前）→ 不重复推送"
     },
     {
       "name": "螺纹",
@@ -75,14 +75,14 @@
         3081,
         3099
       ],
-      "price": 3066,
+      "price": 3061,
       "state": "下破",
       "atr60": 13,
       "risk": 130,
       "allow": "空",
-      "barAgeMin": 0.7,
+      "barAgeMin": 30.6,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 0.7 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 30.6 分钟前）→ 不重复推送"
     },
     {
       "name": "热卷",
@@ -94,14 +94,14 @@
         3246,
         3262
       ],
-      "price": 3239,
+      "price": 3242,
       "state": "下破",
       "atr60": 10.142857142857142,
       "risk": 101,
       "allow": "空",
-      "barAgeMin": 0.7,
+      "barAgeMin": 30.6,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 0.7 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 30.6 分钟前）→ 不重复推送"
     },
     {
       "name": "淀粉",
@@ -113,20 +113,15 @@
         2397,
         2421
       ],
-      "price": 2408,
+      "price": 2409,
       "state": "区间内",
       "atr60": 11.071428571428571,
       "risk": 111,
       "allow": "空",
-      "barAgeMin": 0.8,
+      "barAgeMin": 30.6,
       "fresh": false
     }
   ],
   "signals": [],
-  "pushes": [
-    {
-      "name": "daily",
-      "result": "fail"
-    }
-  ]
+  "pushes": []
 }
