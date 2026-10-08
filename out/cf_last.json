@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-08 12:00:31",
+  "time": "2026-10-08 12:30:37",
   "session": "day",
   "live": true,
   "chains": {
@@ -43,7 +43,7 @@
       "atr60": 83.78571428571429,
       "risk": 838,
       "allow": "多",
-      "barAgeMin": 60.6,
+      "barAgeMin": 90.7,
       "fresh": false
     },
     {
@@ -61,9 +61,9 @@
       "atr60": 16.642857142857142,
       "risk": 166,
       "allow": "多",
-      "barAgeMin": 30.6,
+      "barAgeMin": 60.7,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 30.6 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 60.7 分钟前）→ 不重复推送"
     },
     {
       "name": "螺纹",
@@ -80,9 +80,9 @@
       "atr60": 11.714285714285714,
       "risk": 117,
       "allow": "空",
-      "barAgeMin": 30.6,
+      "barAgeMin": 60.7,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 30.6 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 60.7 分钟前）→ 不重复推送"
     },
     {
       "name": "热卷",
@@ -99,7 +99,7 @@
       "atr60": 9.357142857142858,
       "risk": 94,
       "allow": "空",
-      "barAgeMin": 30.6,
+      "barAgeMin": 60.7,
       "fresh": false
     },
     {
@@ -117,7 +117,7 @@
       "atr60": 10.857142857142858,
       "risk": 109,
       "allow": "空",
-      "barAgeMin": 30.6,
+      "barAgeMin": 60.8,
       "fresh": false
     }
   ],
