@@ -1,7 +1,7 @@
 {
-  "time": "2026-10-12 15:00:27",
+  "time": "2026-10-12 15:30:28",
   "session": "day",
-  "live": true,
+  "live": false,
   "chains": {
     "航运": 2.0412951665884638,
     "有色-锡": 1.477542881975502,
@@ -43,7 +43,7 @@
       "atr60": 111.14285714285714,
       "risk": 1111,
       "allow": "空",
-      "barAgeMin": 75.5,
+      "barAgeMin": 105.6,
       "fresh": false
     },
     {
@@ -61,7 +61,7 @@
       "atr60": 19.571428571428573,
       "risk": 196,
       "allow": "空",
-      "barAgeMin": 0.5,
+      "barAgeMin": 30.6,
       "fresh": false
     },
     {
@@ -79,8 +79,8 @@
       "atr60": 12.857142857142858,
       "risk": 129,
       "allow": "多",
-      "barAgeMin": 0.5,
-      "fresh": true,
+      "barAgeMin": 30.6,
+      "fresh": false,
       "note": "链条反向 → 放弃"
     },
     {
@@ -98,7 +98,7 @@
       "atr60": 11.928571428571429,
       "risk": 119,
       "allow": "多",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.6,
       "fresh": false,
       "note": "链条反向 → 放弃"
     },
@@ -117,16 +117,11 @@
       "atr60": 11,
       "risk": 110,
       "allow": "多",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.6,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 0.6 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 30.6 分钟前）→ 不重复推送"
     }
   ],
   "signals": [],
-  "pushes": [
-    {
-      "name": "daily",
-      "result": "fail"
-    }
-  ]
+  "pushes": []
 }
