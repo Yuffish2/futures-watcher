@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-13 11:30:30",
+  "time": "2026-10-13 12:00:31",
   "session": "day",
   "live": true,
   "chains": {
@@ -43,7 +43,7 @@
       "atr60": 99,
       "risk": 990,
       "allow": "空",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.6,
       "fresh": false,
       "note": "风险 990 元 >300 → 放弃"
     },
@@ -57,14 +57,14 @@
         3373,
         3393
       ],
-      "price": 3359,
+      "price": 3357,
       "state": "下破",
       "atr60": 17.214285714285715,
       "risk": 172,
       "allow": "空",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.6,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 0.6 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 30.6 分钟前）→ 不重复推送"
     },
     {
       "name": "螺纹",
@@ -78,10 +78,10 @@
       ],
       "price": 3088,
       "state": "上破",
-      "atr60": 9.857142857142858,
+      "atr60": 9.928571428571429,
       "risk": 99,
       "allow": "空",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.6,
       "fresh": false,
       "note": "链条反向 → 放弃"
     },
@@ -95,13 +95,13 @@
         3245,
         3255
       ],
-      "price": 3258,
+      "price": 3257,
       "state": "上破",
       "atr60": 10.214285714285714,
       "risk": 102,
       "allow": "空",
-      "barAgeMin": 0.6,
-      "fresh": true,
+      "barAgeMin": 30.7,
+      "fresh": false,
       "note": "链条反向 → 放弃"
     },
     {
@@ -114,12 +114,12 @@
         2445,
         2455
       ],
-      "price": 2447,
+      "price": 2448,
       "state": "区间内",
-      "atr60": 9.928571428571429,
-      "risk": 99,
+      "atr60": 10,
+      "risk": 100,
       "allow": "多",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.7,
       "fresh": false
     }
   ],
