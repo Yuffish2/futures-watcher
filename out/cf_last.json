@@ -1,7 +1,7 @@
 {
-  "time": "2026-10-13 15:00:29",
+  "time": "2026-10-13 15:30:36",
   "session": "day",
-  "live": true,
+  "live": false,
   "chains": {
     "原油-油品": 2.5050821414522195,
     "玉米-淀粉-养殖": 1.2752840251023079,
@@ -43,7 +43,7 @@
       "atr60": 99,
       "risk": 990,
       "allow": "空",
-      "barAgeMin": 60.6,
+      "barAgeMin": 90.7,
       "fresh": false,
       "note": "风险 990 元 >300 → 放弃"
     },
@@ -62,9 +62,9 @@
       "atr60": 18,
       "risk": 180,
       "allow": "空",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.7,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 0.6 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 30.7 分钟前）→ 不重复推送"
     },
     {
       "name": "螺纹",
@@ -76,12 +76,12 @@
         3073,
         3083
       ],
-      "price": 3086,
+      "price": 3089,
       "state": "上破",
       "atr60": 10.357142857142858,
       "risk": 104,
       "allow": "空",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.7,
       "fresh": false,
       "note": "链条反向 → 放弃"
     },
@@ -100,7 +100,7 @@
       "atr60": 10.714285714285714,
       "risk": 107,
       "allow": "空",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.7,
       "fresh": false
     },
     {
@@ -113,36 +113,16 @@
         2445,
         2455
       ],
-      "price": 2456,
+      "price": 2457,
       "state": "上破",
       "atr60": 10.357142857142858,
       "risk": 104,
       "allow": "多",
-      "barAgeMin": 0.6,
-      "fresh": true
+      "barAgeMin": 30.7,
+      "fresh": false,
+      "note": "突破已非新发生（bar 收盘 30.7 分钟前）→ 不重复推送"
     }
   ],
-  "signals": [
-    {
-      "name": "淀粉",
-      "sym": "CS2611",
-      "want": "多",
-      "px": 2456,
-      "stop": 2445.6428571428573,
-      "tgt": 2471.535714285714,
-      "risk": 104,
-      "chain": "玉米-淀粉-养殖",
-      "chainAvg": 1.2752840251023079
-    }
-  ],
-  "pushes": [
-    {
-      "name": "淀粉",
-      "result": "ok"
-    },
-    {
-      "name": "daily",
-      "result": "ok"
-    }
-  ]
+  "signals": [],
+  "pushes": []
 }
