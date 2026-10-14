@@ -1,7 +1,7 @@
 {
-  "time": "2026-10-14 15:00:16",
+  "time": "2026-10-14 15:30:12",
   "session": "day",
-  "live": true,
+  "live": false,
   "chains": {
     "有色-铜": 0.7710214370307611,
     "烯烃链": 0.4552969846288872,
@@ -43,7 +43,7 @@
       "atr60": 84.42857142857143,
       "risk": 844,
       "allow": "空",
-      "barAgeMin": 30.3,
+      "barAgeMin": 60.3,
       "fresh": false,
       "note": "风险 844 元 >300 → 放弃"
     },
@@ -57,12 +57,12 @@
         3369,
         3377
       ],
-      "price": 3374,
+      "price": 3373,
       "state": "区间内",
       "atr60": 17.928571428571427,
       "risk": 179,
       "allow": "多",
-      "barAgeMin": 0.4,
+      "barAgeMin": 30.3,
       "fresh": false
     },
     {
@@ -75,13 +75,13 @@
         3073,
         3081
       ],
-      "price": 3072,
-      "state": "下破",
-      "atr60": 9.714285714285714,
-      "risk": 97,
+      "price": 3073,
+      "state": "区间内",
+      "atr60": 9.785714285714286,
+      "risk": 98,
       "allow": "空",
-      "barAgeMin": 0.4,
-      "fresh": true
+      "barAgeMin": 30.3,
+      "fresh": false
     },
     {
       "name": "热卷",
@@ -93,13 +93,14 @@
         3238,
         3244
       ],
-      "price": 3238,
-      "state": "区间内",
+      "price": 3237,
+      "state": "下破",
       "atr60": 9.571428571428571,
       "risk": 96,
       "allow": "空",
-      "barAgeMin": 0.4,
-      "fresh": false
+      "barAgeMin": 30.3,
+      "fresh": false,
+      "note": "突破已非新发生（bar 收盘 30.3 分钟前）→ 不重复推送"
     },
     {
       "name": "淀粉",
@@ -111,37 +112,15 @@
         2443,
         2448
       ],
-      "price": 2442,
-      "state": "下破",
-      "atr60": 9.357142857142858,
+      "price": 2445,
+      "state": "区间内",
+      "atr60": 9.428571428571429,
       "risk": 94,
       "allow": "多",
-      "barAgeMin": 0.4,
-      "fresh": false,
-      "note": "链条反向 → 放弃"
+      "barAgeMin": 30.3,
+      "fresh": false
     }
   ],
-  "signals": [
-    {
-      "name": "螺纹",
-      "sym": "RB2701",
-      "want": "空",
-      "px": 3072,
-      "stop": 3081.714285714286,
-      "tgt": 3057.4285714285716,
-      "risk": 97,
-      "chain": "黑色-成材",
-      "chainAvg": -0.4557064288909063
-    }
-  ],
-  "pushes": [
-    {
-      "name": "螺纹",
-      "result": "fail"
-    },
-    {
-      "name": "daily",
-      "result": "fail"
-    }
-  ]
+  "signals": [],
+  "pushes": []
 }
