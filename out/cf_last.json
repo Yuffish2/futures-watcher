@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-14 11:30:14",
+  "time": "2026-10-14 12:00:16",
   "session": "day",
   "live": true,
   "chains": {
@@ -43,8 +43,8 @@
       "atr60": 84.42857142857143,
       "risk": 844,
       "allow": "空",
-      "barAgeMin": 0.3,
-      "fresh": true,
+      "barAgeMin": 30.3,
+      "fresh": false,
       "note": "风险 844 元 >300 → 放弃"
     },
     {
@@ -57,12 +57,12 @@
         3369,
         3377
       ],
-      "price": 3376,
+      "price": 3375,
       "state": "区间内",
       "atr60": 17.357142857142858,
       "risk": 174,
       "allow": "多",
-      "barAgeMin": 0.3,
+      "barAgeMin": 30.4,
       "fresh": false
     },
     {
@@ -75,13 +75,14 @@
         3073,
         3081
       ],
-      "price": 3073,
-      "state": "区间内",
-      "atr60": 9,
-      "risk": 90,
+      "price": 3072,
+      "state": "下破",
+      "atr60": 9.071428571428571,
+      "risk": 91,
       "allow": "空",
-      "barAgeMin": 0.3,
-      "fresh": false
+      "barAgeMin": 30.4,
+      "fresh": false,
+      "note": "突破已非新发生（bar 收盘 30.4 分钟前）→ 不重复推送"
     },
     {
       "name": "热卷",
@@ -93,12 +94,12 @@
         3238,
         3244
       ],
-      "price": 3239,
+      "price": 3238,
       "state": "区间内",
-      "atr60": 8.785714285714286,
-      "risk": 88,
+      "atr60": 8.857142857142858,
+      "risk": 89,
       "allow": "空",
-      "barAgeMin": 0.4,
+      "barAgeMin": 30.4,
       "fresh": false
     },
     {
@@ -111,13 +112,14 @@
         2443,
         2448
       ],
-      "price": 2443,
-      "state": "区间内",
-      "atr60": 8.857142857142858,
+      "price": 2441,
+      "state": "下破",
+      "atr60": 8.928571428571429,
       "risk": 89,
       "allow": "空",
-      "barAgeMin": 0.4,
-      "fresh": false
+      "barAgeMin": 30.4,
+      "fresh": false,
+      "note": "突破已非新发生（bar 收盘 30.4 分钟前）→ 不重复推送"
     }
   ],
   "signals": [],
