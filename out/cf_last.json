@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-15 11:30:18",
+  "time": "2026-10-15 12:00:17",
   "session": "day",
   "live": true,
   "chains": {
@@ -45,13 +45,14 @@
         3331,
         3340
       ],
-      "price": 3329,
+      "price": 3330,
       "state": "下破",
       "atr60": 16.428571428571427,
       "risk": 164,
       "allow": "空",
-      "barAgeMin": 0.4,
-      "fresh": true
+      "barAgeMin": 30.4,
+      "fresh": false,
+      "note": "突破已非新发生（bar 收盘 30.4 分钟前）→ 不重复推送"
     },
     {
       "name": "螺纹",
@@ -63,14 +64,13 @@
         3054,
         3064
       ],
-      "price": 3065,
-      "state": "上破",
+      "price": 3064,
+      "state": "区间内",
       "atr60": 10.071428571428571,
       "risk": 101,
       "allow": "空",
-      "barAgeMin": 0.4,
-      "fresh": true,
-      "note": "链条反向 → 放弃"
+      "barAgeMin": 30.4,
+      "fresh": false
     },
     {
       "name": "热卷",
@@ -82,12 +82,12 @@
         3223,
         3233
       ],
-      "price": 3232,
+      "price": 3233,
       "state": "区间内",
       "atr60": 10.214285714285714,
       "risk": 102,
       "allow": "空",
-      "barAgeMin": 0.4,
+      "barAgeMin": 30.4,
       "fresh": false
     },
     {
@@ -100,32 +100,15 @@
         2435,
         2446
       ],
-      "price": 2442,
+      "price": 2441,
       "state": "区间内",
-      "atr60": 8,
-      "risk": 80,
+      "atr60": 8.071428571428571,
+      "risk": 81,
       "allow": "空",
-      "barAgeMin": 0.4,
+      "barAgeMin": 30.4,
       "fresh": false
     }
   ],
-  "signals": [
-    {
-      "name": "豆粕",
-      "sym": "M2701",
-      "want": "空",
-      "px": 3329,
-      "stop": 3345.4285714285716,
-      "tgt": 3304.3571428571427,
-      "risk": 164,
-      "chain": "油脂油料",
-      "chainAvg": -1.108330678385275
-    }
-  ],
-  "pushes": [
-    {
-      "name": "豆粕",
-      "result": "ok"
-    }
-  ]
+  "signals": [],
+  "pushes": []
 }
