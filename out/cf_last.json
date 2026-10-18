@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-18 21:00:49",
+  "time": "2026-10-18 23:00:49",
   "session": "night",
   "live": false,
   "chains": {
@@ -50,7 +50,7 @@
       "atr60": 17,
       "risk": 170,
       "allow": "空",
-      "barAgeMin": 2760.9,
+      "barAgeMin": 2880.9,
       "fresh": false
     },
     {
@@ -68,9 +68,9 @@
       "atr60": 11.357142857142858,
       "risk": 114,
       "allow": "多",
-      "barAgeMin": 2760.9,
+      "barAgeMin": 2880.9,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 2760.9 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 2880.9 分钟前）→ 不重复推送"
     },
     {
       "name": "热卷",
@@ -87,9 +87,9 @@
       "atr60": 12,
       "risk": 120,
       "allow": "多",
-      "barAgeMin": 2761,
+      "barAgeMin": 2881,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 2761 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 2881 分钟前）→ 不重复推送"
     },
     {
       "name": "淀粉",
@@ -106,9 +106,9 @@
       "atr60": 10.142857142857142,
       "risk": 101,
       "allow": "空",
-      "barAgeMin": 2761,
+      "barAgeMin": 2881,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 2761 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 2881 分钟前）→ 不重复推送"
     }
   ],
   "signals": [],
