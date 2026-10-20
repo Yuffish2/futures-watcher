@@ -1,7 +1,7 @@
 {
-  "time": "2026-10-20 15:00:53",
+  "time": "2026-10-20 15:30:49",
   "session": "day",
-  "live": true,
+  "live": false,
   "chains": {
     "原油-油品": 1.203383939389342,
     "新能源金属": 1.1471120949889224,
@@ -45,14 +45,14 @@
         3273,
         3286
       ],
-      "price": 3265,
+      "price": 3267,
       "state": "下破",
       "atr60": 14.857142857142858,
       "risk": 149,
       "allow": "空",
-      "barAgeMin": 1,
+      "barAgeMin": 30.9,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 1 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 30.9 分钟前）→ 不重复推送"
     },
     {
       "name": "螺纹",
@@ -64,12 +64,12 @@
         3067,
         3072
       ],
-      "price": 3068,
+      "price": 3070,
       "state": "区间内",
       "atr60": 9.214285714285714,
       "risk": 92,
       "allow": "空",
-      "barAgeMin": 1.1,
+      "barAgeMin": 30.9,
       "fresh": false
     },
     {
@@ -82,14 +82,13 @@
         3235,
         3240
       ],
-      "price": 3241,
-      "state": "上破",
+      "price": 3240,
+      "state": "区间内",
       "atr60": 10.428571428571429,
       "risk": 104,
       "allow": "空",
-      "barAgeMin": 1.1,
-      "fresh": true,
-      "note": "链条反向 → 放弃"
+      "barAgeMin": 31,
+      "fresh": false
     },
     {
       "name": "淀粉",
@@ -101,36 +100,16 @@
         2421,
         2433
       ],
-      "price": 2434,
+      "price": 2435,
       "state": "上破",
-      "atr60": 12.428571428571429,
-      "risk": 124,
+      "atr60": 12.5,
+      "risk": 125,
       "allow": "多",
-      "barAgeMin": 1.2,
-      "fresh": true
+      "barAgeMin": 31,
+      "fresh": false,
+      "note": "突破已非新发生（bar 收盘 31 分钟前）→ 不重复推送"
     }
   ],
-  "signals": [
-    {
-      "name": "淀粉",
-      "sym": "CS2611",
-      "want": "多",
-      "px": 2434,
-      "stop": 2421.5714285714284,
-      "tgt": 2452.6428571428573,
-      "risk": 124,
-      "chain": "玉米-淀粉-养殖",
-      "chainAvg": 0.5417989336752083
-    }
-  ],
-  "pushes": [
-    {
-      "name": "淀粉",
-      "result": "fail"
-    },
-    {
-      "name": "daily",
-      "result": "fail"
-    }
-  ]
+  "signals": [],
+  "pushes": []
 }
