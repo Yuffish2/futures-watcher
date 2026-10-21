@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-21 11:30:49",
+  "time": "2026-10-21 12:00:51",
   "session": "day",
   "live": true,
   "chains": {
@@ -50,8 +50,9 @@
       "atr60": 13.357142857142858,
       "risk": 134,
       "allow": "空",
-      "barAgeMin": 0.8,
-      "fresh": true
+      "barAgeMin": 30.9,
+      "fresh": false,
+      "note": "突破已非新发生（bar 收盘 30.9 分钟前）→ 不重复推送"
     },
     {
       "name": "螺纹",
@@ -68,7 +69,7 @@
       "atr60": 8.5,
       "risk": 85,
       "allow": "多",
-      "barAgeMin": 0.9,
+      "barAgeMin": 31,
       "fresh": false
     },
     {
@@ -86,7 +87,7 @@
       "atr60": 9.5,
       "risk": 95,
       "allow": "多",
-      "barAgeMin": 0.9,
+      "barAgeMin": 31,
       "fresh": false
     },
     {
@@ -104,42 +105,11 @@
       "atr60": 11.428571428571429,
       "risk": 114,
       "allow": "空",
-      "barAgeMin": 0.9,
-      "fresh": true
+      "barAgeMin": 31,
+      "fresh": false,
+      "note": "突破已非新发生（bar 收盘 31 分钟前）→ 不重复推送"
     }
   ],
-  "signals": [
-    {
-      "name": "豆粕",
-      "sym": "M2701",
-      "want": "空",
-      "px": 3261,
-      "stop": 3274.3571428571427,
-      "tgt": 3240.964285714286,
-      "risk": 134,
-      "chain": "油脂油料",
-      "chainAvg": -0.14568630945486993
-    },
-    {
-      "name": "淀粉",
-      "sym": "CS2611",
-      "want": "空",
-      "px": 2421,
-      "stop": 2432.4285714285716,
-      "tgt": 2403.8571428571427,
-      "risk": 114,
-      "chain": "玉米-淀粉-养殖",
-      "chainAvg": -0.14674683068601757
-    }
-  ],
-  "pushes": [
-    {
-      "name": "豆粕",
-      "result": "ok"
-    },
-    {
-      "name": "淀粉",
-      "result": "ok"
-    }
-  ]
+  "signals": [],
+  "pushes": []
 }
