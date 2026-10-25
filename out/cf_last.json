@@ -1,6 +1,6 @@
 {
-  "time": "2026-10-25 15:30:32",
-  "session": "day",
+  "time": "2026-10-25 21:00:36",
+  "session": "night",
   "live": false,
   "chains": {
     "烯烃链": 5.182939471357195,
@@ -33,35 +33,81 @@
       "sym": "MA2610",
       "chain": "煤化工-氯碱",
       "chainAvg": 1.6931441100394415,
-      "bars": 0
+      "bars": 2
     },
     {
       "name": "豆粕",
       "sym": "M2701",
       "chain": "油脂油料",
       "chainAvg": 0.3436799721483996,
-      "bars": 0
+      "bars": 8,
+      "range": [
+        3260,
+        3278
+      ],
+      "price": 3280,
+      "state": "上破",
+      "atr60": 15.642857142857142,
+      "risk": 156,
+      "allow": "多",
+      "barAgeMin": 2760.7,
+      "fresh": false,
+      "note": "突破已非新发生（bar 收盘 2760.7 分钟前）→ 不重复推送"
     },
     {
       "name": "螺纹",
       "sym": "RB2701",
       "chain": "黑色-成材",
       "chainAvg": -0.0944099432361567,
-      "bars": 0
+      "bars": 8,
+      "range": [
+        3040,
+        3053
+      ],
+      "price": 3042,
+      "state": "区间内",
+      "atr60": 12.857142857142858,
+      "risk": 129,
+      "allow": "空",
+      "barAgeMin": 2760.7,
+      "fresh": false
     },
     {
       "name": "热卷",
       "sym": "HC2701",
       "chain": "黑色-成材",
       "chainAvg": -0.0944099432361567,
-      "bars": 0
+      "bars": 8,
+      "range": [
+        3205,
+        3216
+      ],
+      "price": 3201,
+      "state": "下破",
+      "atr60": 13.642857142857142,
+      "risk": 136,
+      "allow": "空",
+      "barAgeMin": 2760.8,
+      "fresh": false,
+      "note": "突破已非新发生（bar 收盘 2760.8 分钟前）→ 不重复推送"
     },
     {
       "name": "淀粉",
       "sym": "CS2611",
       "chain": "玉米-淀粉-养殖",
       "chainAvg": -0.2604772428606905,
-      "bars": 0
+      "bars": 8,
+      "range": [
+        2425,
+        2446
+      ],
+      "price": 2432,
+      "state": "区间内",
+      "atr60": 11.571428571428571,
+      "risk": 116,
+      "allow": "空",
+      "barAgeMin": 2760.9,
+      "fresh": false
     }
   ],
   "signals": [],
