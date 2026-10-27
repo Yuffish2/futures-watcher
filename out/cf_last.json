@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-27 11:30:34",
+  "time": "2026-10-27 12:00:36",
   "session": "day",
   "live": true,
   "chains": {
@@ -45,12 +45,12 @@
         3185,
         3212
       ],
-      "price": 3201,
+      "price": 3205,
       "state": "区间内",
-      "atr60": 18.857142857142858,
-      "risk": 189,
+      "atr60": 19.071428571428573,
+      "risk": 191,
       "allow": "空",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.7,
       "fresh": false
     },
     {
@@ -63,51 +63,51 @@
         3017,
         3025
       ],
-      "price": 3024,
-      "state": "区间内",
-      "atr60": 11.142857142857142,
-      "risk": 111,
+      "price": 3026,
+      "state": "上破",
+      "atr60": 11.571428571428571,
+      "risk": 116,
       "allow": "空",
-      "barAgeMin": 0.7,
-      "fresh": false
+      "barAgeMin": 30.7,
+      "fresh": false,
+      "note": "链条反向 → 放弃"
     },
     {
       "name": "热卷",
       "sym": "HC2701",
       "chain": "黑色-成材",
       "chainAvg": -0.7783779124563628,
-      "bars": 8,
+      "bars": 9,
       "range": [
         3158,
         3166
       ],
-      "price": 3156,
-      "state": "下破",
-      "atr60": 13.357142857142858,
-      "risk": 134,
+      "price": 3162,
+      "state": "区间内",
+      "atr60": 13,
+      "risk": 130,
       "allow": "空",
-      "barAgeMin": 15.7,
-      "fresh": false,
-      "note": "突破已非新发生（bar 收盘 15.7 分钟前）→ 不重复推送"
+      "barAgeMin": 30.7,
+      "fresh": false
     },
     {
       "name": "淀粉",
       "sym": "CS2611",
       "chain": "玉米-淀粉-养殖",
       "chainAvg": 0.5484822657837785,
-      "bars": 8,
+      "bars": 9,
       "range": [
         2463,
         2476
       ],
       "price": 2478,
       "state": "上破",
-      "atr60": 11.642857142857142,
-      "risk": 116,
+      "atr60": 11.214285714285714,
+      "risk": 112,
       "allow": "多",
-      "barAgeMin": 15.7,
+      "barAgeMin": 30.7,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 15.7 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 30.7 分钟前）→ 不重复推送"
     }
   ],
   "signals": [],
