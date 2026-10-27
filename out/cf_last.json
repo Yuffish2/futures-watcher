@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-27 12:00:36",
+  "time": "2026-10-27 12:30:29",
   "session": "day",
   "live": true,
   "chains": {
@@ -50,7 +50,7 @@
       "atr60": 19.071428571428573,
       "risk": 191,
       "allow": "空",
-      "barAgeMin": 30.7,
+      "barAgeMin": 60.6,
       "fresh": false
     },
     {
@@ -68,7 +68,7 @@
       "atr60": 11.571428571428571,
       "risk": 116,
       "allow": "空",
-      "barAgeMin": 30.7,
+      "barAgeMin": 60.6,
       "fresh": false,
       "note": "链条反向 → 放弃"
     },
@@ -87,7 +87,7 @@
       "atr60": 13,
       "risk": 130,
       "allow": "空",
-      "barAgeMin": 30.7,
+      "barAgeMin": 60.6,
       "fresh": false
     },
     {
@@ -105,9 +105,9 @@
       "atr60": 11.214285714285714,
       "risk": 112,
       "allow": "多",
-      "barAgeMin": 30.7,
+      "barAgeMin": 60.7,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 30.7 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 60.7 分钟前）→ 不重复推送"
     }
   ],
   "signals": [],
