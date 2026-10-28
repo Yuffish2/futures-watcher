@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-28 12:00:24",
+  "time": "2026-10-28 12:30:17",
   "session": "day",
   "live": true,
   "chains": {
@@ -50,9 +50,9 @@
       "atr60": 16.071428571428573,
       "risk": 161,
       "allow": "多",
-      "barAgeMin": 30.5,
+      "barAgeMin": 60.4,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 30.5 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 60.4 分钟前）→ 不重复推送"
     },
     {
       "name": "螺纹",
@@ -69,7 +69,7 @@
       "atr60": 11.357142857142858,
       "risk": 114,
       "allow": "多",
-      "barAgeMin": 30.5,
+      "barAgeMin": 60.4,
       "fresh": false,
       "note": "链条反向 → 放弃"
     },
@@ -88,7 +88,7 @@
       "atr60": 13.785714285714286,
       "risk": 138,
       "allow": "多",
-      "barAgeMin": 30.6,
+      "barAgeMin": 60.5,
       "fresh": false
     },
     {
@@ -106,9 +106,9 @@
       "atr60": 11.642857142857142,
       "risk": 116,
       "allow": "空",
-      "barAgeMin": 30.6,
+      "barAgeMin": 60.5,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 30.6 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 60.5 分钟前）→ 不重复推送"
     }
   ],
   "signals": [],
