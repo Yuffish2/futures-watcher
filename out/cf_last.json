@@ -1,6 +1,6 @@
 {
-  "time": "2026-11-01 15:30:17",
-  "session": "day",
+  "time": "2026-11-01 21:00:16",
+  "session": "night",
   "live": false,
   "chains": {
     "软商品-果": 3.366765564170915,
@@ -33,35 +33,79 @@
       "sym": "MA2610",
       "chain": "煤化工-氯碱",
       "chainAvg": 0.04171684063118084,
-      "bars": 0
+      "bars": 2
     },
     {
       "name": "豆粕",
       "sym": "M2701",
       "chain": "油脂油料",
       "chainAvg": 0.3651085683321642,
-      "bars": 0
+      "bars": 8,
+      "range": [
+        3178,
+        3189
+      ],
+      "price": 3179,
+      "state": "区间内",
+      "atr60": 16.142857142857142,
+      "risk": 161,
+      "allow": "多",
+      "barAgeMin": 2760.4,
+      "fresh": false
     },
     {
       "name": "螺纹",
       "sym": "RB2701",
       "chain": "黑色-成材",
       "chainAvg": -0.46771130178188125,
-      "bars": 0
+      "bars": 8,
+      "range": [
+        3018,
+        3032
+      ],
+      "price": 3022,
+      "state": "区间内",
+      "atr60": 11.571428571428571,
+      "risk": 116,
+      "allow": "空",
+      "barAgeMin": 2760.4,
+      "fresh": false
     },
     {
       "name": "热卷",
       "sym": "HC2701",
       "chain": "黑色-成材",
       "chainAvg": -0.46771130178188125,
-      "bars": 0
+      "bars": 8,
+      "range": [
+        3161,
+        3174
+      ],
+      "price": 3166,
+      "state": "区间内",
+      "atr60": 12.071428571428571,
+      "risk": 121,
+      "allow": "空",
+      "barAgeMin": 2760.4,
+      "fresh": false
     },
     {
       "name": "淀粉",
       "sym": "CS2611",
       "chain": "玉米-淀粉-养殖",
       "chainAvg": -0.07195720605369105,
-      "bars": 0
+      "bars": 3,
+      "range": [
+        2436,
+        2454
+      ],
+      "price": 2438,
+      "state": "区间内",
+      "atr60": 12.428571428571429,
+      "risk": 124,
+      "allow": "空",
+      "barAgeMin": 2760.5,
+      "fresh": false
     }
   ],
   "signals": [],
