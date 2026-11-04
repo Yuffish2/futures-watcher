@@ -1,7 +1,7 @@
 {
-  "time": "2026-11-04 15:00:39",
+  "time": "2026-11-04 15:30:39",
   "session": "day",
-  "live": true,
+  "live": false,
   "chains": {
     "新能源-硅": 1.5165942487326833,
     "纯碱-玻璃-建材": 0.5761277843812788,
@@ -45,13 +45,14 @@
         3116,
         3134
       ],
-      "price": 3116,
-      "state": "区间内",
-      "atr60": 18.285714285714285,
-      "risk": 183,
+      "price": 3114,
+      "state": "下破",
+      "atr60": 18.357142857142858,
+      "risk": 184,
       "allow": "空",
-      "barAgeMin": 0.7,
-      "fresh": false
+      "barAgeMin": 30.7,
+      "fresh": false,
+      "note": "突破已非新发生（bar 收盘 30.7 分钟前）→ 不重复推送"
     },
     {
       "name": "螺纹",
@@ -63,14 +64,14 @@
         2991,
         2997
       ],
-      "price": 3009,
+      "price": 3008,
       "state": "上破",
       "atr60": 11.642857142857142,
       "risk": 116,
       "allow": "多",
-      "barAgeMin": 0.8,
+      "barAgeMin": 30.8,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 0.8 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 30.8 分钟前）→ 不重复推送"
     },
     {
       "name": "热卷",
@@ -82,14 +83,14 @@
         3149,
         3156
       ],
-      "price": 3163,
+      "price": 3161,
       "state": "上破",
       "atr60": 11.142857142857142,
       "risk": 111,
       "allow": "多",
-      "barAgeMin": 0.8,
+      "barAgeMin": 30.8,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 0.8 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 30.8 分钟前）→ 不重复推送"
     },
     {
       "name": "淀粉",
@@ -106,15 +107,10 @@
       "atr60": 8.357142857142858,
       "risk": 84,
       "allow": "多",
-      "barAgeMin": 0.8,
+      "barAgeMin": 30.8,
       "fresh": false
     }
   ],
   "signals": [],
-  "pushes": [
-    {
-      "name": "daily",
-      "result": "fail"
-    }
-  ]
+  "pushes": []
 }
