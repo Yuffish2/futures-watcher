@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-09 11:30:28",
+  "time": "2026-11-09 12:00:28",
   "session": "day",
   "live": true,
   "chains": {
@@ -50,7 +50,7 @@
       "atr60": 20.5,
       "risk": 205,
       "allow": "空",
-      "barAgeMin": 0.5,
+      "barAgeMin": 30.6,
       "fresh": false
     },
     {
@@ -63,13 +63,14 @@
         3035,
         3046
       ],
-      "price": 3036,
-      "state": "区间内",
+      "price": 3034,
+      "state": "下破",
       "atr60": 10.785714285714286,
       "risk": 108,
       "allow": "空",
-      "barAgeMin": 0.6,
-      "fresh": false
+      "barAgeMin": 30.6,
+      "fresh": false,
+      "note": "突破已非新发生（bar 收盘 30.6 分钟前）→ 不重复推送"
     },
     {
       "name": "热卷",
@@ -81,32 +82,33 @@
         3195,
         3207
       ],
-      "price": 3188,
+      "price": 3186,
       "state": "下破",
-      "atr60": 12,
-      "risk": 120,
+      "atr60": 12.071428571428571,
+      "risk": 121,
       "allow": "空",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.6,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 0.6 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 30.6 分钟前）→ 不重复推送"
     },
     {
       "name": "淀粉",
       "sym": "CS2611",
       "chain": "玉米-淀粉-养殖",
       "chainAvg": 0.27128635128101375,
-      "bars": 6,
+      "bars": 7,
       "range": [
         2485,
         2485
       ],
-      "price": 2485,
-      "state": "区间内",
-      "atr60": 10.142857142857142,
-      "risk": 101,
+      "price": 2490,
+      "state": "上破",
+      "atr60": 9.428571428571429,
+      "risk": 94,
       "allow": "多",
       "barAgeMin": 30.6,
-      "fresh": false
+      "fresh": false,
+      "note": "突破已非新发生（bar 收盘 30.6 分钟前）→ 不重复推送"
     }
   ],
   "signals": [],
