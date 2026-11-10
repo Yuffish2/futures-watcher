@@ -1,7 +1,7 @@
 {
-  "time": "2026-11-10 15:00:28",
+  "time": "2026-11-10 15:30:28",
   "session": "day",
-  "live": true,
+  "live": false,
   "chains": {
     "油脂油料": 0.46476145869264524,
     "黑色-炉料": 0.39942219574081506,
@@ -45,14 +45,14 @@
         3053,
         3072
       ],
-      "price": 3088,
+      "price": 3086,
       "state": "上破",
       "atr60": 17.214285714285715,
       "risk": 172,
       "allow": "多",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.6,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 0.6 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 30.6 分钟前）→ 不重复推送"
     },
     {
       "name": "螺纹",
@@ -64,14 +64,13 @@
         3036,
         3043
       ],
-      "price": 3035,
-      "state": "下破",
+      "price": 3036,
+      "state": "区间内",
       "atr60": 9.357142857142858,
       "risk": 94,
       "allow": "空",
-      "barAgeMin": 0.6,
-      "fresh": false,
-      "note": "突破已非新发生（bar 收盘 0.6 分钟前）→ 不重复推送"
+      "barAgeMin": 30.6,
+      "fresh": false
     },
     {
       "name": "热卷",
@@ -88,8 +87,9 @@
       "atr60": 9.857142857142858,
       "risk": 99,
       "allow": "空",
-      "barAgeMin": 0.6,
-      "fresh": true
+      "barAgeMin": 30.6,
+      "fresh": false,
+      "note": "突破已非新发生（bar 收盘 30.6 分钟前）→ 不重复推送"
     },
     {
       "name": "淀粉",
@@ -99,27 +99,6 @@
       "bars": 0
     }
   ],
-  "signals": [
-    {
-      "name": "热卷",
-      "sym": "HC2701",
-      "want": "空",
-      "px": 3191,
-      "stop": 3200.8571428571427,
-      "tgt": 3176.214285714286,
-      "risk": 99,
-      "chain": "黑色-成材",
-      "chainAvg": -0.12758112003281585
-    }
-  ],
-  "pushes": [
-    {
-      "name": "热卷",
-      "result": "fail"
-    },
-    {
-      "name": "daily",
-      "result": "fail"
-    }
-  ]
+  "signals": [],
+  "pushes": []
 }
