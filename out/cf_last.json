@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-11 12:30:28",
+  "time": "2026-11-11 13:00:28",
   "session": "day",
   "live": true,
   "chains": {
@@ -45,12 +45,12 @@
         3090,
         3168
       ],
-      "price": 3141,
+      "price": 3140,
       "state": "区间内",
-      "atr60": 19.571428571428573,
+      "atr60": 19.642857142857142,
       "risk": 196,
       "allow": "多",
-      "barAgeMin": 60.5,
+      "barAgeMin": 90.6,
       "fresh": false
     },
     {
@@ -63,12 +63,12 @@
         3036,
         3047
       ],
-      "price": 3041,
+      "price": 3038,
       "state": "区间内",
-      "atr60": 8.857142857142858,
-      "risk": 89,
+      "atr60": 9,
+      "risk": 90,
       "allow": "多",
-      "barAgeMin": 60.6,
+      "barAgeMin": 90.6,
       "fresh": false
     },
     {
@@ -86,7 +86,7 @@
       "atr60": 8.785714285714286,
       "risk": 88,
       "allow": "多",
-      "barAgeMin": 60.6,
+      "barAgeMin": 90.6,
       "fresh": false
     },
     {
