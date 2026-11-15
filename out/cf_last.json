@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-15 23:00:00",
+  "time": "2026-11-15 23:30:00",
   "session": "night",
   "live": false,
   "chains": {
@@ -50,7 +50,7 @@
       "atr60": 16.714285714285715,
       "risk": 167,
       "allow": "多",
-      "barAgeMin": 2880.2,
+      "barAgeMin": 2910.1,
       "fresh": false
     },
     {
@@ -68,7 +68,7 @@
       "atr60": 9.714285714285714,
       "risk": 97,
       "allow": "空",
-      "barAgeMin": 2880.2,
+      "barAgeMin": 2910.1,
       "fresh": false
     },
     {
@@ -86,9 +86,9 @@
       "atr60": 11.642857142857142,
       "risk": 116,
       "allow": "空",
-      "barAgeMin": 2880.2,
+      "barAgeMin": 2910.2,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 2880.2 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 2910.2 分钟前）→ 不重复推送"
     },
     {
       "name": "淀粉",
