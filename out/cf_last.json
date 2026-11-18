@@ -1,7 +1,7 @@
 {
-  "time": "2026-11-18 15:00:29",
+  "time": "2026-11-18 15:30:29",
   "session": "day",
-  "live": true,
+  "live": false,
   "chains": {
     "新能源金属": 1.7114914425427896,
     "新能源-硅": 1.370197546508306,
@@ -45,12 +45,12 @@
         3096,
         3115
       ],
-      "price": 3087,
+      "price": 3086,
       "state": "下破",
       "atr60": 15.571428571428571,
       "risk": 156,
       "allow": "多",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.6,
       "fresh": false,
       "note": "链条反向 → 放弃"
     },
@@ -64,12 +64,12 @@
         2962,
         2972
       ],
-      "price": 2975,
+      "price": 2977,
       "state": "上破",
       "atr60": 13.357142857142858,
       "risk": 134,
       "allow": "空",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.6,
       "fresh": false,
       "note": "链条反向 → 放弃"
     },
@@ -83,12 +83,12 @@
         3102,
         3115
       ],
-      "price": 3109,
+      "price": 3112,
       "state": "区间内",
-      "atr60": 14.5,
-      "risk": 145,
+      "atr60": 14.571428571428571,
+      "risk": 146,
       "allow": "空",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.6,
       "fresh": false
     },
     {
@@ -100,10 +100,5 @@
     }
   ],
   "signals": [],
-  "pushes": [
-    {
-      "name": "daily",
-      "result": "ok"
-    }
-  ]
+  "pushes": []
 }
