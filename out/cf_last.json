@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-18 12:00:29",
+  "time": "2026-11-18 12:30:29",
   "session": "day",
   "live": true,
   "chains": {
@@ -50,7 +50,7 @@
       "atr60": 15.642857142857142,
       "risk": 156,
       "allow": "多",
-      "barAgeMin": 30.6,
+      "barAgeMin": 60.6,
       "fresh": false,
       "note": "链条反向 → 放弃"
     },
@@ -69,7 +69,7 @@
       "atr60": 12.857142857142858,
       "risk": 129,
       "allow": "空",
-      "barAgeMin": 30.6,
+      "barAgeMin": 60.6,
       "fresh": false
     },
     {
@@ -87,7 +87,7 @@
       "atr60": 13.571428571428571,
       "risk": 136,
       "allow": "空",
-      "barAgeMin": 30.6,
+      "barAgeMin": 60.6,
       "fresh": false
     },
     {
