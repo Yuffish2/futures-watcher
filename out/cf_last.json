@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-19 11:30:29",
+  "time": "2026-11-19 12:00:29",
   "session": "day",
   "live": true,
   "chains": {
@@ -45,14 +45,14 @@
         3066,
         3080
       ],
-      "price": 3049,
+      "price": 3051,
       "state": "下破",
       "atr60": 15.642857142857142,
       "risk": 156,
       "allow": "空",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.6,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 0.6 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 30.6 分钟前）→ 不重复推送"
     },
     {
       "name": "螺纹",
@@ -64,14 +64,13 @@
         2983,
         2993
       ],
-      "price": 2979,
-      "state": "下破",
+      "price": 2984,
+      "state": "区间内",
       "atr60": 11,
       "risk": 110,
       "allow": "多",
-      "barAgeMin": 0.6,
-      "fresh": false,
-      "note": "链条反向 → 放弃"
+      "barAgeMin": 30.6,
+      "fresh": false
     },
     {
       "name": "热卷",
@@ -83,14 +82,13 @@
         3114,
         3125
       ],
-      "price": 3108,
-      "state": "下破",
+      "price": 3114,
+      "state": "区间内",
       "atr60": 12.5,
       "risk": 125,
       "allow": "多",
-      "barAgeMin": 0.6,
-      "fresh": false,
-      "note": "链条反向 → 放弃"
+      "barAgeMin": 30.6,
+      "fresh": false
     },
     {
       "name": "淀粉",
