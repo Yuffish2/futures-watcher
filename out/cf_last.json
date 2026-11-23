@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-23 11:30:32",
+  "time": "2026-11-23 12:00:32",
   "session": "day",
   "live": true,
   "chains": {
@@ -50,9 +50,9 @@
       "atr60": 19.071428571428573,
       "risk": 191,
       "allow": "多",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.6,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 0.6 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 30.6 分钟前）→ 不重复推送"
     },
     {
       "name": "螺纹",
@@ -64,12 +64,12 @@
         2986,
         3000
       ],
-      "price": 2994,
+      "price": 2993,
       "state": "区间内",
       "atr60": 13.142857142857142,
       "risk": 131,
       "allow": "空",
-      "barAgeMin": 0.6,
+      "barAgeMin": 30.6,
       "fresh": false
     },
     {
@@ -87,7 +87,7 @@
       "atr60": 13.785714285714286,
       "risk": 138,
       "allow": "空",
-      "barAgeMin": 0.7,
+      "barAgeMin": 30.6,
       "fresh": false
     },
     {
