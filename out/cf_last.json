@@ -1,7 +1,7 @@
 {
-  "time": "2026-11-24 15:00:15",
+  "time": "2026-11-24 15:30:15",
   "session": "day",
-  "live": true,
+  "live": false,
   "chains": {
     "合成橡胶": 2.2938303723788063,
     "软商品-糖": 1.771144278606962,
@@ -50,7 +50,7 @@
       "atr60": 15.5,
       "risk": 155,
       "allow": "多",
-      "barAgeMin": 0.4,
+      "barAgeMin": 30.3,
       "fresh": false
     },
     {
@@ -68,9 +68,9 @@
       "atr60": 12.214285714285714,
       "risk": 122,
       "allow": "多",
-      "barAgeMin": 0.4,
+      "barAgeMin": 30.3,
       "fresh": false,
-      "note": "突破已非新发生（bar 收盘 0.4 分钟前）→ 不重复推送"
+      "note": "突破已非新发生（bar 收盘 30.3 分钟前）→ 不重复推送"
     },
     {
       "name": "热卷",
@@ -82,14 +82,13 @@
         3130,
         3139
       ],
-      "price": 3129,
-      "state": "下破",
+      "price": 3130,
+      "state": "区间内",
       "atr60": 13.857142857142858,
       "risk": 139,
       "allow": "多",
-      "barAgeMin": 0.4,
-      "fresh": true,
-      "note": "链条反向 → 放弃"
+      "barAgeMin": 30.4,
+      "fresh": false
     },
     {
       "name": "淀粉",
@@ -100,10 +99,5 @@
     }
   ],
   "signals": [],
-  "pushes": [
-    {
-      "name": "daily",
-      "result": "ok"
-    }
-  ]
+  "pushes": []
 }
